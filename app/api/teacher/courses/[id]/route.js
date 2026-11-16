@@ -74,7 +74,7 @@ export async function PUT(request, { params }) {
 
   try {
     const courseId = Number(params.id);
-    const { title, description, color_index } = await request.json();
+    const { title, description, color_index, price } = await request.json();
     const supabase = getSupabase();
 
     const { data, error } = await supabase
@@ -83,6 +83,7 @@ export async function PUT(request, { params }) {
         title: title?.trim(),
         description: description?.trim() || '',
         color_index: Number(color_index) || 0,
+        price: Math.max(0, Number(price) || 0),
       })
       .eq('id', courseId)
       .eq('teacher_id', user.id)

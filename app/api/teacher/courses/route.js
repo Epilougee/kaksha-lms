@@ -30,7 +30,7 @@ export async function POST(request) {
   if (errorResponse) return errorResponse;
 
   try {
-    const { title, code, description, color_index, join_code } = await request.json();
+    const { title, code, description, color_index, join_code, price } = await request.json();
 
     if (!title || !code) {
       return NextResponse.json({ error: 'Course title and course code are required.' }, { status: 400 });
@@ -49,6 +49,7 @@ export async function POST(request) {
         code: cleanCode,
         description: description?.trim() || '',
         color_index: Number(color_index) || 0,
+        price: Math.max(0, Number(price) || 0),
         teacher_id: user.id,
         join_code: generatedJoinCode,
       })

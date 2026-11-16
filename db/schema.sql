@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS courses (
   code TEXT NOT NULL UNIQUE,
   description TEXT NOT NULL DEFAULT '',
   color_index INTEGER NOT NULL DEFAULT 0 CHECK (color_index >= 0 AND color_index <= 5),
+  price INTEGER NOT NULL DEFAULT 0 CHECK (price >= 0),
   teacher_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   join_code TEXT NOT NULL UNIQUE
 );
@@ -36,6 +37,8 @@ CREATE TABLE IF NOT EXISTS enrollments (
   id SERIAL PRIMARY KEY,
   course_id INTEGER NOT NULL REFERENCES courses(id) ON DELETE CASCADE,
   student_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  payment_id TEXT,
+  amount_paid INTEGER NOT NULL DEFAULT 0,
   joined_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
   UNIQUE (course_id, student_id)
 );

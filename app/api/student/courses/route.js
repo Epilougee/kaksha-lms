@@ -56,18 +56,9 @@ export async function GET() {
     return NextResponse.json({ courses: enriched });
   } catch (err) {
     console.warn('My courses using demo fallback:', err.message);
-    const { DEMO_COURSES } = await import('@/lib/demoData');
+    const { getStudentEnrolledCourses } = await import('@/lib/demoData');
     return NextResponse.json({
-      courses: DEMO_COURSES.map((c) => ({
-        id: c.id,
-        title: c.title,
-        code: c.code,
-        description: c.description,
-        color_index: c.color_index,
-        teacherName: c.teacher.name,
-        progress: user?.email === 'student1@demo.com' ? 89 : 25,
-        totalLessons: 6,
-      })),
+      courses: getStudentEnrolledCourses(user),
     });
   }
 }

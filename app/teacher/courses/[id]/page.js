@@ -220,6 +220,9 @@ export default function TeacherCourseEditorPage() {
               <span style={{ fontSize: '11px', fontWeight: 700, background: '#EBF2FE', color: 'var(--primary)', padding: '2px 8px', borderRadius: '4px' }}>
                 {course.code}
               </span>
+              <span style={{ fontSize: '11px', fontWeight: 700, background: (course.price || 0) > 0 ? '#FEF3C7' : '#F1F5F9', color: (course.price || 0) > 0 ? '#92400E' : '#475569', padding: '2px 8px', borderRadius: '4px' }}>
+                {(course.price || 0) > 0 ? `Elective Fee: ₹${course.price}` : 'Institutional Curriculum (Free)'}
+              </span>
               <span style={{ fontSize: '12px', color: 'var(--muted)' }}>
                 {course.enrolledCount} students enrolled
               </span>

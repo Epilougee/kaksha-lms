@@ -12,6 +12,7 @@ export default function NewCoursePage() {
   const [description, setDescription] = useState('');
   const [colorIndex, setColorIndex] = useState('0');
   const [joinCode, setJoinCode] = useState('');
+  const [price, setPrice] = useState('0');
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
 
@@ -29,6 +30,7 @@ export default function NewCoursePage() {
           code,
           description,
           color_index: Number(colorIndex),
+          price: Number(price) || 0,
           join_code: joinCode || undefined,
         }),
       });
@@ -120,6 +122,23 @@ export default function NewCoursePage() {
                 <option value="4">Green (#16A34A)</option>
                 <option value="5">Slate (#475569)</option>
               </select>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label" htmlFor="price">Course Fee / Price (₹)</label>
+              <input
+                id="price"
+                type="number"
+                min="0"
+                step="50"
+                className="input"
+                placeholder="0 for institutional/free, or e.g. 499 for elective"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+              />
+              <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '4px' }}>
+                Set ₹0 for mandatory college curriculum, or specify an elective enrollment fee (e.g., ₹499).
+              </div>
             </div>
 
             <div className="form-group">
