@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#f2f3ff","inverse-on-surface":"#eef0ff","tertiary-fixed":"#ffdbcb","secondary-fixed":"#ffddb5","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","on-error":"#ffffff","surface-container-high":"#e2e7ff","on-surface-variant":"#424654","on-secondary-fixed-variant":"#643f00","background":"#faf8ff","surface-container":"#eaedff","surface-bright":"#faf8ff","surface-tint":"#0056d0","on-tertiary-fixed-variant":"#793100","on-secondary-fixed":"#2a1800","on-tertiary-container":"#ffffff","primary":"#0055ce","tertiary-fixed-dim":"#ffb691","on-primary-fixed":"#001847","on-surface":"#131b2e","surface-variant":"#dae2fd","inverse-surface":"#283044","surface-dim":"#d2d9f4","primary-container":"#2f6fed","surface-container-highest":"#dae2fd","secondary":"#835400","on-primary":"#ffffff","error":"#ba1a1a","on-background":"#131b2e","secondary-container":"#ffad2e","error-container":"#ffdad6","outline-variant":"#c2c6d7","outline":"#737786","on-tertiary":"#ffffff","on-primary-container":"#ffffff","on-secondary-container":"#6c4400","inverse-primary":"#b1c5ff","primary-fixed":"#dae2ff","on-tertiary-fixed":"#341100","tertiary-container":"#c45400","on-error-container":"#93000a","surface":"#faf8ff","secondary-fixed-dim":"#ffb957","primary-fixed-dim":"#b1c5ff","tertiary":"#9d4200","on-primary-fixed-variant":"#0040a0"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-mobile":"1rem","space-lg":"2rem","space-sm":"1rem",margin:"2rem","space-md":"1.5rem","margin-mobile":"1rem",gutter:"1.5rem","space-xs":"0.5rem","space-2xs":"0.25rem"},fontFamily:{"caption":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],overline:["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-medium":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-regular":["Plus Jakarta Sans"],"body-semibold":["Plus Jakarta Sans"]},fontSize:{caption:["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"display-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],overline:["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"700"}],"title-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-medium":["14px",{lineHeight:"20px",fontWeight:"500"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-regular":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-semibold":["14px",{lineHeight:"20px",fontWeight:"600"}]}}}};</script></head><body class="bg-[#F5F7FB] font-body-regular text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-[#0F172A] z-50 flex flex-col justify-between shrink-0 shadow-lg"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between border-b border-[#1E293B]"><div class="flex items-center gap-space-xs"><img alt="Kaksha Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBaxyuPeW_BpQvGxFazuUcSwZiltZxYelwDs4MRCZGemvk76oFcMpgGiW4CP5me207IpJYQ_qNcXUdRNgZMBX1Vpm5aROp6af_zXjxRsi2v32cOzgG_y6aD1kwhxdz-aAwHhAIHAHcnATzWlP1wTSNHKfiJG2Gqs-FNPCFl4EcJpdFy2R9lSmfR4DvkwDJiz2RbxJK_45C27SXxItjHpsvRRQ88l9eYyhnv0W-xpo5acw"/><span class="font-title-md text-title-md text-[#FFFFFF] tracking-tight">Kaksha</span></div><span class="font-caption text-caption px-space-xs py-space-2xs rounded bg-[#334155] text-[#94A3B8]">BCA Dept</span></div><div class="px-space-sm pt-space-md"><span class="font-overline text-overline uppercase tracking-wider text-[#64748B] px-space-xs mb-space-xs block">Academic Menu</span><nav class="space-y-space-2xs" data-active-classes="bg-[#2F6FED]/20 text-[#FFFFFF] font-semibold border-l-2 border-primary-container"><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-[#94A3B8] hover:text-[#FFFFFF] hover:bg-[#1E293B] transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-medium text-body-medium">Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg transition-colors bg-[#2F6FED]/20 text-[#FFFFFF] font-semibold border-l-2 border-primary-container" data-path="my-courses" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-body-medium text-body-medium">My Courses</span></a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-[#94A3B8] hover:text-[#FFFFFF] hover:bg-[#1E293B] transition-colors" data-path="live-classes" href="#"><span class="material-symbols-outlined text-[20px]">sensors</span><span class="font-body-medium text-body-medium">Live Classes</span></a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-[#94A3B8] hover:text-[#FFFFFF] hover:bg-[#1E293B] transition-colors" data-path="assignments" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-body-medium text-body-medium">Assignments</span></a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-[#94A3B8] hover:text-[#FFFFFF] hover:bg-[#1E293B] transition-colors" data-path="schedule" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span class="font-body-medium text-body-medium">Schedule</span></a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-[#94A3B8] hover:text-[#FFFFFF] hover:bg-[#1E293B] transition-colors" data-path="grades" href="#"><span class="material-symbols-outlined text-[20px]">grade</span><span class="font-body-medium text-body-medium">Grades</span></a></nav></div></div><div class="flex flex-col border-t border-[#1E293B]"><div class="px-space-sm py-space-xs space-y-space-2xs"><a class="flex items-center justify-between px-space-xs py-space-xs rounded-lg text-[#94A3B8] hover:text-[#FFFFFF] hover:bg-[#1E293B] transition-colors" data-path="faculty-portal" href="#"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span class="font-body-medium text-body-medium">Faculty Portal</span></div><span class="material-symbols-outlined text-[16px]">north_east</span></a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-[#94A3B8] hover:text-[#FFFFFF] hover:bg-[#1E293B] transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-medium text-body-medium">Settings</span></a></div><div class="p-space-sm bg-[#0A0F1D]/80"><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-9 h-9 rounded-full object-cover ring-1 ring-[#334155]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrAfHzfts92l3BELZMnZ-EwSmfrIsb_5Q4n-1V9MnVLPyl77-8t6tBrHdjyYuDYFkuv4PfOfOYiBMQ1i8YaHmFQVeCHAd7DKiH3LGLh2NN1IchhQA7kCZA7ytpCnS7PeXFXsjRQ3w9cuSi8nm9je7tkHyXZ1Y3LolMRNsV8M1C_O40KLRxqjCWYTd9UetaH2XruNQT7d7ZkOgKV35qzT6nbOnH4ue2oE6qoyYYqlJ9"/><div class="flex flex-col overflow-hidden"><span class="font-body-semibold text-body-semibold text-[#FFFFFF] truncate">Aarav Sharma</span><span class="font-caption text-caption text-[#94A3B8] truncate">BCA-2023-042</span></div></div></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-[#FFFFFF] border-b border-[#E4E9F2] z-40 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-xs bg-[#FFFFFF] border border-[#E2E8F0] rounded-lg font-body-regular text-body-regular text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Search courses, lectures, materials..." type="text"/></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-2xs px-space-xs py-space-2xs bg-surface-container-high/60 rounded-full"><span class="material-symbols-outlined text-[16px] text-primary">school</span><span class="font-caption text-caption text-on-surface-variant font-medium">Semester IV - Spring 2025</span></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-xs pl-space-2xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrAfHzfts92l3BELZMnZ-EwSmfrIsb_5Q4n-1V9MnVLPyl77-8t6tBrHdjyYuDYFkuv4PfOfOYiBMQ1i8YaHmFQVeCHAd7DKiH3LGLh2NN1IchhQA7kCZA7ytpCnS7PeXFXsjRQ3w9cuSi8nm9je7tkHyXZ1Y3LolMRNsV8M1C_O40KLRxqjCWYTd9UetaH2XruNQT7d7ZkOgKV35qzT6nbOnH4ue2oE6qoyYYqlJ9"/></div></div></header><main class="relative pt-16 min-h-screen bg-[#F5F7FB]"><div class="max-w-[1440px] mx-auto p-space-md"><div class="flex flex-col w-full pb-space-lg">
+<!-- Breadcrumb & Global Context Header -->
+<nav aria-label="Breadcrumb" class="flex items-center justify-between mb-space-md">
+<ol class="flex items-center gap-space-xs text-on-surface-variant">
+<li class="flex items-center gap-space-xs">
+<a class="font-body-medium text-body-medium hover:text-primary transition-colors" href="#">My Courses</a>
+<span class="material-symbols-outlined text-outline text-[16px]">chevron_right</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<a class="font-body-medium text-body-medium hover:text-primary transition-colors" href="#">Python Programming (CS-402)</a>
+<span class="material-symbols-outlined text-outline text-[16px]">chevron_right</span>
+</li>
+<li aria-current="page" class="font-body-semibold text-body-semibold text-on-surface">
+        Module 3: Vectorization
+      </li>
+</ol>
+<div class="hidden xl:flex items-center gap-space-xs text-on-surface-variant font-caption text-caption bg-surface-container-high/40 px-space-xs py-space-2xs rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>Live Sync Enabled</span>
+<span class="text-outline">/</span>
+<span class="font-mono text-outline">v2.4-stable</span>
+</div>
+</nav>
+<!-- Main Asymmetric Workspace Layout (68% / 32%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- Left Interactive Stage: Media & Academic Artifacts (68% on Desktop) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- High-Precision Video Console -->
+<section class="relative w-full aspect-video bg-[#0F172A] rounded-xl overflow-hidden shadow-xl group select-none flex flex-col justify-between" id="video-console">
+<!-- Visual Backdrop Layer with Fallback & Editorial Vignette -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-70 filter brightness-90 contrast-110" data-alt="Technical code editor showing advanced Python vectorization with NumPy, high resolution monitor in a modern computer science lecture hall with dark ambient lighting, subtle cyan and slate tones, clean sharp collegiate setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDa2Phnw3nz9Ix7bqDGVQMTxtZOOVgG-l4rgLZrIGkl7psHGzLYInSu-oXXj5XsHBqSj9zfSH_FZHMJHF774eoCzVQoN-DUB-KlDhu4KcW6gmHfxLTNCsHfYqJgDX9tDXESFoiO9cSv6qDOkfItS9m3QrRRDljYc1S0t8YMxrjFCmGRdFX1LKgyzIQLJXdbIARr9q-JPtwD4eVKHkx6RpalvCBCG1GQcIVSMtBg-GXM')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0A0F1D] via-transparent to-[#0A0F1D]/80 pointer-events-none"></div>
+</div>
+<!-- Video Top Bar (Meta Overlay) -->
+<div class="relative z-10 p-space-sm flex items-center justify-between text-[#FFFFFF] bg-gradient-to-b from-[#0A0F1D]/90 to-transparent">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="px-space-xs py-space-2xs bg-primary-container/90 text-on-primary-container font-caption text-caption rounded font-semibold uppercase tracking-wider">
+              Lecture 14
+            </span>
+<h1 class="font-title-md text-title-md truncate text-[#FFFFFF]">NumPy Array Manipulation &amp; Vectorization</h1>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-caption text-caption px-space-xs py-space-2xs bg-[#1E293B]/80 text-[#94A3B8] rounded border border-[#334155]/60 backdrop-blur-sm">
+              1080p 60fps
+            </span>
+</div>
+</div>
+<!-- Center Quick-Play Trigger Indicator -->
+<div class="relative z-10 flex items-center justify-center my-auto">
+<button aria-label="Toggle Playback" class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg transition-transform hover:scale-110 active:scale-95" id="center-play-button" type="button">
+<span class="material-symbols-outlined text-[32px]" id="center-play-icon" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Video Controls Matrix -->
+<div class="relative z-10 px-space-md py-space-sm bg-gradient-to-t from-[#0A0F1D] via-[#0A0F1D]/90 to-transparent flex flex-col gap-space-2xs text-[#FFFFFF]">
+<!-- Scrubbing Bar with Multi-tier Buffering -->
+<div class="relative w-full h-2 group/slider cursor-pointer flex items-center" id="scrubber-track">
+<div class="w-full h-1 bg-[#334155] rounded-full overflow-hidden relative group-hover/slider:h-1.5 transition-all">
+<div class="absolute left-0 top-0 bottom-0 bg-[#475569] w-[75%] rounded-full"></div>
+<div class="absolute left-0 top-0 bottom-0 bg-primary-container w-[62%] rounded-full" id="scrubber-fill"></div>
+</div>
+<!-- Scrubber Thumb -->
+<div class="absolute left-[62%] -translate-x-1/2 w-3.5 h-3.5 bg-[#FFFFFF] rounded-full shadow-md scale-0 group-hover/slider:scale-100 transition-transform"></div>
+</div>
+<!-- Bottom Operational Row -->
+<div class="flex items-center justify-between pt-space-2xs">
+<!-- Left Action Cluster -->
+<div class="flex items-center gap-space-sm">
+<button aria-label="Play/Pause" class="text-[#E2E8F0] hover:text-[#FFFFFF] transition-colors" id="ctrl-play-btn" type="button">
+<span class="material-symbols-outlined text-[24px]">play_arrow</span>
+</button>
+<button aria-label="Skip backward 10 seconds" class="text-[#94A3B8] hover:text-[#FFFFFF] transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">replay_10</span>
+</button>
+<button aria-label="Skip forward 10 seconds" class="text-[#94A3B8] hover:text-[#FFFFFF] transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">forward_10</span>
+</button>
+<!-- Volume Group -->
+<div class="flex items-center gap-space-2xs group/vol">
+<button aria-label="Mute Volume" class="text-[#94A3B8] hover:text-[#FFFFFF] transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">volume_up</span>
+</button>
+<div class="w-16 h-1 bg-[#334155] rounded-full overflow-hidden cursor-pointer">
+<div class="h-full bg-[#CBD5E1] w-[80%] rounded-full"></div>
+</div>
+</div>
+<!-- Timestamp -->
+<div class="font-caption text-caption text-[#94A3B8] font-mono select-none tracking-tight">
+<span class="text-[#FFFFFF]">38:24</span> / 45:10
+              </div>
+</div>
+<!-- Right Controls Cluster -->
+<div class="flex items-center gap-space-sm">
+<!-- Playback Speed Indicator -->
+<button class="font-caption text-caption text-[#CBD5E1] font-semibold hover:text-[#FFFFFF] px-space-xs py-space-2xs rounded bg-[#1E293B]/60 hover:bg-[#1E293B] border border-[#334155]/40 transition-colors" id="speed-btn" type="button">
+                1.0x
+              </button>
+<!-- Captions -->
+<button aria-label="Closed Captions" class="text-[#94A3B8] hover:text-[#FFFFFF] transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">closed_caption</span>
+</button>
+<!-- Quality -->
+<button aria-label="Settings" class="text-[#94A3B8] hover:text-[#FFFFFF] transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+<!-- Fullscreen -->
+<button aria-label="Fullscreen" class="text-[#E2E8F0] hover:text-[#FFFFFF] transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Lecture Header & Primary Action Row -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<h2 class="font-headline-md text-headline-md text-on-surface">
+              Lecture 14: NumPy Array Manipulation &amp; Vectorization
+            </h2>
+<div class="flex items-center gap-space-xs font-body-medium text-body-medium text-on-surface-variant flex-wrap">
+<span class="font-body-semibold text-body-semibold text-on-surface">Dr. Ramesh Iyer</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Professor of Computational Mathematics</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-outline">Uploaded 3 days ago</span>
+</div>
+</div>
+<!-- Academic Action Suite -->
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="h-10 px-space-md bg-surface-container-lowest text-on-surface hover:bg-surface-container border border-outline-variant rounded-lg font-body-semibold text-body-semibold flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Download Transcript (PDF)</span>
+</button>
+<button class="h-10 px-space-md bg-primary-container hover:bg-[#2558CA] text-on-primary-container rounded-lg font-body-semibold text-body-semibold flex items-center gap-space-xs transition-all shadow-sm" id="mark-complete-btn" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span id="complete-btn-text">Mark Complete</span>
+</button>
+</div>
+</div>
+<!-- Instructor Insight Strip -->
+<div class="mt-space-md pt-space-sm border-t border-surface-container-high/60 flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+              Python 3.11 Runtime
+            </span>
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-primary">memory</span>
+              NumPy v1.26.2
+            </span>
+</div>
+<span class="text-outline">Comp. Verification ID: #CS402-VEC-1094</span>
+</div>
+</section>
+<!-- Academic Content Tabs & Material Assets -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Tab Navigation Bar -->
+<div class="flex items-center border-b border-surface-container-high px-space-md bg-surface-container-low/40">
+<nav aria-label="Course Resource Tabs" class="flex gap-space-md" id="tab-headers">
+<button class="tab-btn py-space-sm font-body-semibold text-body-semibold text-on-surface-variant hover:text-on-surface border-b-2 border-transparent transition-all flex items-center gap-space-xs" data-tab="lessons" onclick="switchTab('lessons')" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Lessons Overview</span>
+</button>
+<button class="tab-btn py-space-sm font-body-semibold text-body-semibold text-primary border-b-2 border-primary-container transition-all flex items-center gap-space-xs" data-tab="materials" onclick="switchTab('materials')" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+<span>Materials (4)</span>
+<span class="px-space-2xs py-0.5 rounded-full bg-primary/10 text-primary font-caption text-overline">Required</span>
+</button>
+<button class="tab-btn py-space-sm font-body-semibold text-body-semibold text-on-surface-variant hover:text-on-surface border-b-2 border-transparent transition-all flex items-center gap-space-xs" data-tab="assignments" onclick="switchTab('assignments')" type="button">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>Assignments (2)</span>
+</button>
+<button class="tab-btn py-space-sm font-body-semibold text-body-semibold text-on-surface-variant hover:text-on-surface border-b-2 border-transparent transition-all flex items-center gap-space-xs" data-tab="discussions" onclick="switchTab('discussions')" type="button">
+<span class="material-symbols-outlined text-[18px]">chat_bubble_outline</span>
+<span>Discussions</span>
+</button>
+</nav>
+</div>
+<!-- Tab Content Containers -->
+<div class="p-space-md">
+<!-- Materials Pane (Active) -->
+<div class="flex flex-col gap-space-md" id="tab-materials">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Curated Course Artifacts</h3>
+<p class="font-body-regular text-body-regular text-on-surface-variant">Download lecture slides, quick-reference guides, and verified code execution notebooks.</p>
+</div>
+<button class="h-9 px-space-sm text-primary hover:bg-surface-container rounded-lg font-body-semibold text-body-semibold flex items-center gap-space-2xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+<span>Download All (.zip)</span>
+</button>
+</div>
+<!-- Crisp Hairline Table -->
+<div class="overflow-x-auto rounded-lg border border-surface-container-high">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/60 text-on-surface-variant font-overline text-overline uppercase tracking-wider border-b border-surface-container-high">
+<th class="py-space-xs px-space-md font-semibold" scope="col">Document / File</th>
+<th class="py-space-xs px-space-sm font-semibold" scope="col">Classification</th>
+<th class="py-space-xs px-space-sm font-semibold" scope="col">Filesize</th>
+<th class="py-space-xs px-space-md text-right font-semibold" scope="col">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-body-regular text-body-regular">
+<!-- File Row 1 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-error-container/40 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate group-hover:text-primary transition-colors">
+                            NumPy-Cheatsheet-v2.pdf
+                          </span>
+<span class="font-caption text-caption text-outline">Updated for NumPy 1.26 syntax standards</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center px-space-xs py-space-2xs rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant">
+                        Reference Guide
+                      </span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-outline font-caption text-caption">
+                      1.4 MB
+                    </td>
+<td class="py-space-sm px-space-md text-right">
+<a class="inline-flex items-center justify-center h-8 px-space-sm bg-surface-container-high/70 hover:bg-primary-container hover:text-on-primary-container text-on-surface rounded-lg font-body-medium text-body-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] mr-1">download</span>
+                        Download
+                      </a>
+</td>
+</tr>
+<!-- File Row 2 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">slideshow</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate group-hover:text-primary transition-colors">
+                            Lecture-14-Slides.pdf
+                          </span>
+<span class="font-caption text-caption text-outline">Complete slide deck with step-by-step memory mapping diagrams</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center px-space-xs py-space-2xs rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant">
+                        Lecture Presentation
+                      </span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-outline font-caption text-caption">
+                      3.8 MB
+                    </td>
+<td class="py-space-sm px-space-md text-right">
+<a class="inline-flex items-center justify-center h-8 px-space-sm bg-surface-container-high/70 hover:bg-primary-container hover:text-on-primary-container text-on-surface rounded-lg font-body-medium text-body-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] mr-1">download</span>
+                        Download
+                      </a>
+</td>
+</tr>
+<!-- File Row 3 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed/40 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate group-hover:text-primary transition-colors">
+                            vectorization_examples.py
+                          </span>
+<span class="font-caption text-caption text-outline">Self-contained benchmarking script comparing pure loops vs vectorization</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center px-space-xs py-space-2xs rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant">
+                        Executable Code
+                      </span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-outline font-caption text-caption">
+                      24 KB
+                    </td>
+<td class="py-space-sm px-space-md text-right">
+<a class="inline-flex items-center justify-center h-8 px-space-sm bg-surface-container-high/70 hover:bg-primary-container hover:text-on-primary-container text-on-surface rounded-lg font-body-medium text-body-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] mr-1">download</span>
+                        Download
+                      </a>
+</td>
+</tr>
+<!-- File Row 4 -->
+<tr class="hover:bg-surface-container-lowest transition-colors group">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">data_table</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate group-hover:text-primary transition-colors">
+                            climate_metrics_raw.csv
+                          </span>
+<span class="font-caption text-caption text-outline">Sample dataset used in exercise 14.3 for matrix transformation</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center px-space-xs py-space-2xs rounded-full font-caption text-caption bg-surface-container-high text-on-surface-variant">
+                        Dataset
+                      </span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-outline font-caption text-caption">
+                      890 KB
+                    </td>
+<td class="py-space-sm px-space-md text-right">
+<a class="inline-flex items-center justify-center h-8 px-space-sm bg-surface-container-high/70 hover:bg-primary-container hover:text-on-primary-container text-on-surface rounded-lg font-body-medium text-body-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] mr-1">download</span>
+                        Download
+                      </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Lessons Overview Pane -->
+<div class="hidden flex-col gap-space-sm" id="tab-lessons">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Curriculum Notes: Module 3</h4>
+<p class="font-body-regular text-body-regular text-on-surface-variant">
+              In this module, we transition from scalar programming paradigms into hardware-accelerated contiguous block memory manipulation. Vectorization eliminates CPython loop interpretation overhead and leverages SIMD (Single Instruction, Multiple Data) microprocessor instructions.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm mt-space-xs">
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="font-overline text-overline uppercase tracking-wider text-outline block mb-space-2xs">Key Concept</span>
+<span class="font-body-semibold text-body-semibold text-on-surface">Broadcasting Stride Mechanics</span>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Understanding row-major C-order indexing vs Fortran order column strides.</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="font-overline text-overline uppercase tracking-wider text-outline block mb-space-2xs">Performance Target</span>
+<span class="font-body-semibold text-body-semibold text-on-surface">65x Compute Acceleration</span>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Elimination of intermediate PyObject pointers across array axes.</p>
+</div>
+</div>
+</div>
+<!-- Assignments Pane -->
+<div class="hidden flex-col gap-space-sm" id="tab-assignments">
+<div class="flex items-center justify-between p-space-sm border border-surface-container-high rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">code_blocks</span>
+</div>
+<div>
+<h5 class="font-body-semibold text-body-semibold text-on-surface">Lab Exercise 3.2: Vectorized Matrix Cosine Similarity</h5>
+<span class="font-caption text-caption text-outline">Due March 28, 2025 • Auto-graded via Kaksha Sandbox</span>
+</div>
+</div>
+<span class="px-space-xs py-space-2xs bg-[#ECFDF5] text-[#16A37F] font-caption text-caption rounded-full font-semibold">Submitted</span>
+</div>
+<div class="flex items-center justify-between p-space-sm border border-surface-container-high rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">quiz</span>
+</div>
+<div>
+<h5 class="font-body-semibold text-body-semibold text-on-surface">Module 3 Milestone Assessment</h5>
+<span class="font-caption text-caption text-outline">Due April 2, 2025 • 25 Multichoice &amp; Code Diagnostics</span>
+</div>
+</div>
+<span class="px-space-xs py-space-2xs bg-[#FFFBEB] text-[#D97706] font-caption text-caption rounded-full font-semibold">Pending</span>
+</div>
+</div>
+<!-- Discussions Pane -->
+<div class="hidden flex-col gap-space-sm" id="tab-discussions">
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-caption shrink-0">
+                DR
+              </div>
+<div class="flex flex-col gap-1 w-full">
+<div class="flex items-center justify-between">
+<span class="font-body-semibold text-body-semibold text-on-surface">Devika Rao</span>
+<span class="font-caption text-caption text-outline">2 hours ago</span>
+</div>
+<p class="font-body-regular text-body-regular text-on-surface-variant">
+                  Does NumPy allocate new physical buffers during reshape if the array is already contiguous in memory?
+                </p>
+<div class="mt-2 text-primary font-caption text-caption font-semibold cursor-pointer">
+                  1 reply from Dr. Ramesh Iyer
+                </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Side Course Syllabus Navigation (32% on Desktop) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Academic Syllabus Card Container -->
+<section class="bg-surface-container-lowest rounded-xl border border-surface-container-high shadow-sm p-space-md flex flex-col sticky top-20">
+<!-- Header & Quantitative Progress Monitor -->
+<div class="flex flex-col gap-space-xs pb-space-md border-b border-surface-container-high">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Course Content</h3>
+<span class="font-body-semibold text-body-semibold text-primary">72%</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<span>Progress: 18 of 24 Completed</span>
+<span class="text-outline font-mono">6 left</span>
+</div>
+<!-- Slim Monoline Progress Bar Track -->
+<div class="w-full bg-[#EBF2FE] h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Scrollable Module Accordions List -->
+<div class="flex flex-col divide-y divide-surface-container-high pt-space-xs" id="syllabus-accordion">
+<!-- Module 1: Collapsible (Completed) -->
+<div class="py-space-xs">
+<button class="w-full flex items-center justify-between py-space-xs hover:bg-surface-container-low/60 px-space-xs rounded-lg transition-colors group" onclick="toggleModule('mod1-content', 'mod1-icon')" type="button">
+<div class="flex items-center gap-space-xs text-left min-w-0">
+<span class="material-symbols-outlined text-[18px] text-[#16A37F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate group-hover:text-primary transition-colors">
+                    Module 1: Foundations
+                  </span>
+<span class="font-caption text-caption text-outline">4 of 4 completed • 1h 45m</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] transition-transform duration-200" id="mod1-icon">expand_more</span>
+</button>
+<div class="hidden pl-8 pr-2 py-2 text-caption text-on-surface-variant space-y-2" id="mod1-content">
+<div class="flex items-center justify-between text-outline py-1">
+<span>1.1 Python Architecture &amp; CPython VM</span>
+<span>Done</span>
+</div>
+<div class="flex items-center justify-between text-outline py-1">
+<span>1.2 Memory Model &amp; Pointers</span>
+<span>Done</span>
+</div>
+</div>
+</div>
+<!-- Module 2: Collapsible (Completed) -->
+<div class="py-space-xs">
+<button class="w-full flex items-center justify-between py-space-xs hover:bg-surface-container-low/60 px-space-xs rounded-lg transition-colors group" onclick="toggleModule('mod2-content', 'mod2-icon')" type="button">
+<div class="flex items-center gap-space-xs text-left min-w-0">
+<span class="material-symbols-outlined text-[18px] text-[#16A37F]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate group-hover:text-primary transition-colors">
+                    Module 2: Object-Oriented Python
+                  </span>
+<span class="font-caption text-caption text-outline">6 of 6 completed • 3h 10m</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] transition-transform duration-200" id="mod2-icon">expand_more</span>
+</button>
+<div class="hidden pl-8 pr-2 py-2 text-caption text-on-surface-variant space-y-2" id="mod2-content">
+<div class="flex items-center justify-between text-outline py-1">
+<span>2.1 Dunder Methods &amp; Metaclasses</span>
+<span>Done</span>
+</div>
+</div>
+</div>
+<!-- Module 3: Active Unit (Scientific Computing & NumPy) -->
+<div class="py-space-sm">
+<div class="flex items-center justify-between px-space-xs mb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-overline text-overline uppercase tracking-wider text-primary">In Progress</span>
+</div>
+<h4 class="font-body-semibold text-body-semibold text-on-surface">Module 3: Scientific Computing &amp; NumPy</h4>
+</div>
+<span class="font-caption text-caption text-outline font-mono">2/4 Done</span>
+</div>
+<!-- Nested Lesson Playlist -->
+<div class="space-y-space-2xs mt-space-xs">
+<!-- Lesson 12 -->
+<a class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[#16A37F] text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface-variant truncate group-hover:text-on-surface">
+                      Lesson 12: Intro to ndarrays
+                    </span>
+<span class="font-caption text-caption text-outline">28 min • Completed</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">replay</span>
+</a>
+<!-- Lesson 13 -->
+<a class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[#16A37F] text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface-variant truncate group-hover:text-on-surface">
+                      Lesson 13: Array Indexing &amp; Slicing
+                    </span>
+<span class="font-caption text-caption text-outline">35 min • Completed</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px] opacity-0 group-hover:opacity-100 transition-opacity">replay</span>
+</a>
+<!-- Lesson 14: Currently Playing (Highlighted State) -->
+<div class="flex items-center justify-between p-space-xs rounded-lg bg-[#2F6FED]/10 border-l-4 border-primary-container shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] animate-pulse">volume_up</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-semibold text-body-semibold text-primary truncate">
+                      Lesson 14: NumPy Array Vectorization
+                    </span>
+<span class="font-caption text-caption text-primary font-medium">Currently Playing • 45 min</span>
+</div>
+</div>
+<span class="px-space-2xs py-0.5 rounded bg-primary-container text-on-primary-container font-caption text-overline font-bold uppercase tracking-wider">
+                  Live
+                </span>
+</div>
+<!-- Lesson 15: Up Next / Locked -->
+<div class="flex items-center justify-between p-space-xs rounded-lg text-outline opacity-80 cursor-not-allowed">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface-variant truncate">
+                      Lesson 15: Broadcasting Rules &amp; Performance
+                    </span>
+<span class="font-caption text-caption text-outline">42 min • Unlocks next</span>
+</div>
+</div>
+<span class="font-caption text-caption font-mono text-outline">Up Next</span>
+</div>
+</div>
+</div>
+<!-- Module 4: Locked Future Module -->
+<div class="py-space-xs opacity-75">
+<div class="w-full flex items-center justify-between py-space-xs px-space-xs rounded-lg cursor-not-allowed text-outline">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-semibold text-body-semibold text-on-surface-variant truncate">
+                    Module 4: Pandas for Data Analysis
+                  </span>
+<span class="font-caption text-caption text-outline">4 lessons • 2h 45m</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Syllabus Footer Utility / Quick Feedback -->
+<div class="mt-space-md pt-space-sm border-t border-surface-container-high flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<a class="flex items-center gap-space-2xs hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">help_outline</span>
+<span>Ask Academic Advisor</span>
+</a>
+<a class="flex items-center gap-space-2xs hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Syllabus (PDF)</span>
+</a>
+</div>
+</section>
+<!-- Academic Accreditation & Certification Card -->
+<section class="bg-surface-container-low p-space-md rounded-xl flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-semibold text-body-semibold text-on-surface truncate">BCA Honor Credit Eligible</span>
+<span class="font-caption text-caption text-on-surface-variant">Complete all 4 module assignments with ≥ 80% to earn certification.</span>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  // Tab Switching Micro-interaction
+  function switchTab(tabId) {
+    const panes = ['lessons', 'materials', 'assignments', 'discussions'];
+    panes.forEach(p => {
+      const paneEl = document.getElementById('tab-' + p);
+      if (paneEl) {
+        if (p === tabId) {
+          paneEl.classList.remove('hidden');
+          paneEl.classList.add('flex');
+        } else {
+          paneEl.classList.add('hidden');
+          paneEl.classList.remove('flex');
+        }
+      }
+    });
+
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => {
+      if (btn.getAttribute('data-tab') === tabId) {
+        btn.classList.add('text-primary', 'border-primary-container');
+        btn.classList.remove('text-on-surface-variant', 'border-transparent');
+      } else {
+        btn.classList.remove('text-primary', 'border-primary-container');
+        btn.classList.add('text-on-surface-variant', 'border-transparent');
+      }
+    });
+  }
+
+  // Collapsible Accordion Micro-interaction
+  function toggleModule(contentId, iconId) {
+    const content = document.getElementById(contentId);
+    const icon = document.getElementById(iconId);
+    if (content) {
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  }
+
+  // Video Play Simulation
+  const playBtn = document.getElementById('center-play-button');
+  const playIcon = document.getElementById('center-play-icon');
+  const ctrlPlayBtn = document.getElementById('ctrl-play-btn');
+  let isPlaying = false;
+
+  function togglePlayState() {
+    isPlaying = !isPlaying;
+    const iconName = isPlaying ? 'pause' : 'play_arrow';
+    if (playIcon) playIcon.innerText = iconName;
+    if (ctrlPlayBtn) {
+      ctrlPlayBtn.innerHTML = `<span class="material-symbols-outlined text-[24px]">${iconName}</span>`;
+    }
+  }
+
+  if (playBtn) playBtn.addEventListener('click', togglePlayState);
+  if (ctrlPlayBtn) ctrlPlayBtn.addEventListener('click', togglePlayState);
+
+  // Playback speed cycle
+  const speedBtn = document.getElementById('speed-btn');
+  const speeds = ['1.0x', '1.25x', '1.5x', '2.0x'];
+  let currentSpeedIdx = 0;
+  if (speedBtn) {
+    speedBtn.addEventListener('click', () => {
+      currentSpeedIdx = (currentSpeedIdx + 1) % speeds.length;
+      speedBtn.innerText = speeds[currentSpeedIdx];
+    });
+  }
+
+  // Mark Complete Interaction
+  const markCompleteBtn = document.getElementById('mark-complete-btn');
+  const completeBtnText = document.getElementById('complete-btn-text');
+  let isCompleted = false;
+
+  if (markCompleteBtn) {
+    markCompleteBtn.addEventListener('click', () => {
+      isCompleted = !isCompleted;
+      if (isCompleted) {
+        markCompleteBtn.classList.remove('bg-primary-container');
+        markCompleteBtn.classList.add('bg-[#16A37F]');
+        if (completeBtnText) completeBtnText.innerText = 'Completed';
+      } else {
+        markCompleteBtn.classList.add('bg-primary-container');
+        markCompleteBtn.classList.remove('bg-[#16A37F]');
+        if (completeBtnText) completeBtnText.innerText = 'Mark Complete';
+      }
+    });
+  }
+</script></div></main></div></body></html>
