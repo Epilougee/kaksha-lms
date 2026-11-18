@@ -1,0 +1,12 @@
+[
+  {
+    "id": 101,
+    "name": "Kavita Iyer",
+    "email": "kavita.iyer@student.edu",
+    "role": "student",
+    "department": "BCA Semester IV",
+    "plainPassword": "KavitaPass#42",
+    "status": "Active",
+    "created_at": "2026-11-18T17:24:27.659Z"
+  }
+]

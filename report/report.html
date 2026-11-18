@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kaksha LMS - Mini Project Report</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #0F172A;
+    background-color: #F1F5F9;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto 10mm auto;
+    padding: 20mm 22mm 18mm 22mm;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  @media print {
+    body {
+      background: none;
+    }
+    .page {
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+
+  /* Header & Titles */
+  .page-title {
+    font-size: 17pt;
+    font-weight: 800;
+    color: #2F6FED;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 3px;
+  }
+  .page-rule {
+    width: 100%;
+    height: 1.5px;
+    background: #2F6FED;
+    margin-bottom: 12px;
+  }
+  .section-h2 {
+    font-size: 11pt;
+    font-weight: 700;
+    color: #0F172A;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .section-h2::before {
+    content: "";
+    display: inline-block;
+    width: 3.5px;
+    height: 13px;
+    background: #2F6FED;
+    border-radius: 2px;
+  }
+  p {
+    margin-bottom: 6px;
+    text-align: justify;
+  }
+  ul, ol {
+    margin-left: 18px;
+    margin-bottom: 6px;
+  }
+  li {
+    margin-bottom: 3px;
+  }
+
+  /* Footer */
+  .page-footer {
+    position: absolute;
+    bottom: 10mm;
+    left: 22mm;
+    right: 22mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8.5pt;
+    color: #64748B;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 5px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 8.5pt;
+  }
+  th, td {
+    border: 1px solid #CBD5E1;
+    padding: 4.5px 6px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-weight: 700;
+  }
+  tr:nth-child(even) td {
+    background-color: #FBFCFE;
+  }
+
+  /* Code block */
+  pre {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 7.5pt;
+    line-height: 1.3;
+    overflow: hidden;
+    margin: 6px 0;
+  }
+
+  /* Screenshot Grid */
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 6px;
+  }
+  .screenshot-card {
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    padding: 6px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .screenshot-img {
+    width: 100%;
+    height: 78mm;
+    object-fit: cover;
+    object-position: top;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    display: block;
+  }
+  .screenshot-caption {
+    font-size: 8pt;
+    font-style: italic;
+    font-weight: 600;
+    color: #2F6FED;
+    margin-top: 4px;
+    margin-bottom: 2px;
+  }
+  .screenshot-desc {
+    font-size: 7.5pt;
+    color: #475569;
+    line-height: 1.25;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========================================================================= -->
+<!-- PAGE 1: COVER PAGE                                                        -->
+<!-- ========================================================================= -->
+<div class="page" style="display: flex; flex-direction: column; justify-content: space-between; text-align: center;">
+  <div>
+    <div style="font-size: 13pt; font-weight: 800; letter-spacing: 0.12em; color: #64748B; margin-top: 15mm; text-transform: uppercase;">
+      Ajeenkya DY Patil University, Pune
+    </div>
+    <div style="font-size: 10pt; color: #475569; margin-top: 2mm;">
+      School of Engineering &middot; Department of Computer Applications
+    </div>
+  </div>
+
+  <div style="margin: 15mm 0;">
+    <div style="display: inline-block; padding: 4px 14px; background: #EBF2FE; color: #2F6FED; border-radius: 4px; font-weight: 700; font-size: 10pt; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.08em;">
+      Mini Project Report
+    </div>
+    <h1 style="font-size: 26pt; font-weight: 900; color: #0F172A; line-height: 1.2; letter-spacing: -0.02em; max-width: 150mm; margin: 0 auto;">
+      KAKSHA
+    </h1>
+    <div style="font-size: 15pt; font-weight: 700; color: #2F6FED; margin-top: 4mm;">
+      Academic Learning Management System
+    </div>
+    <div style="font-size: 10pt; color: #64748B; margin-top: 4mm; max-width: 120mm; margin-left: auto; margin-right: auto; line-height: 1.4;">
+      A Web-Based Platform for Course Administration, Lecture Delivery, Assignment Evaluation, and Academic Performance Tracking
+    </div>
+  </div>
+
+  <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px; max-width: 140mm; margin: 0 auto; text-align: left; font-size: 9.5pt;">
+    <table style="width: 100%; border: none; margin: 0;">
+      <tr style="background: none;"><td style="border: none; padding: 3px 0; font-weight: 600; width: 45%; color: #64748B;">Student Name:</td><td style="border: none; padding: 3px 0; font-weight: 700; color: #0F172A;">Swapnil Sahu</td></tr>
+      <tr style="background: none;"><td style="border: none; padding: 3px 0; font-weight: 600; color: #64748B;">Program:</td><td style="border: none; padding: 3px 0; font-weight: 600; color: #0F172A;">BCA (AI &amp; Data Science)</td></tr>
+      <tr style="background: none;"><td style="border: none; padding: 3px 0; font-weight: 600; color: #64748B;">PRN / Roll No.:</td><td style="border: none; padding: 3px 0; font-weight: 700; color: #2F6FED;">ADYPU-BCA-2024-042</td></tr>
+      <tr style="background: none;"><td style="border: none; padding: 3px 0; font-weight: 600; color: #64748B;">Semester &amp; Cycle:</td><td style="border: none; padding: 3px 0; color: #0F172A;">Semester IV (2026-27)</td></tr>
+      <tr style="background: none;"><td style="border: none; padding: 3px 0; font-weight: 600; color: #64748B;">Project Guide:</td><td style="border: none; padding: 3px 0; font-weight: 700; color: #0F172A;">Dr. Ramesh Iyer</td></tr>
+    </table>
+  </div>
+
+  <div style="margin-bottom: 10mm; font-size: 9pt; color: #64748B;">
+    Department of Computer Applications &middot; Pune, Maharashtra, India<br>
+    Academic Session 2026-27
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 2: CERTIFICATE AND ACKNOWLEDGEMENT                                   -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="page-title">Certificate &amp; Acknowledgement</div>
+  <div class="page-rule"></div>
+
+  <div class="section-h2">Certificate of Authenticity</div>
+  <p style="margin-top: 6px; line-height: 1.5;">
+    This is to certify that the mini project entitled <strong>"Kaksha: Academic Learning Management System"</strong> submitted by <strong>Swapnil Sahu</strong> (PRN: <strong>ADYPU-BCA-2024-042</strong>) is a bonafide work carried out in the Department of Computer Applications, School of Engineering, Ajeenkya DY Patil University, Pune. This project is submitted in partial fulfillment of the requirements for the degree of <strong>Bachelor of Computer Applications (AI &amp; Data Science)</strong> during the academic year 2026-27.
+  </p>
+
+  <p style="margin-top: 6px; line-height: 1.5;">
+    The practical implementation, system design, source code development, and unit test validations documented in this report have been completed under our direct guidance and supervision. To the best of our knowledge, the work presented here has not been submitted elsewhere for the award of any other degree or diploma.
+  </p>
+
+  <div style="display: flex; justify-content: space-between; margin-top: 22mm; text-align: center;">
+    <div style="width: 48mm;">
+      <div style="border-top: 1px solid #0F172A; padding-top: 5px; font-weight: 700; font-size: 9pt;">Dr. Ramesh Iyer</div>
+      <div style="font-size: 8pt; color: #64748B;">Project Guide &amp; Faculty</div>
+      <div style="font-size: 7.5pt; color: #94A3B8;">Dept. of Computer Applications</div>
+    </div>
+    <div style="width: 48mm;">
+      <div style="border-top: 1px solid #0F172A; padding-top: 5px; font-weight: 700; font-size: 9pt;">Dr. S. K. Kulkarni</div>
+      <div style="font-size: 8pt; color: #64748B;">Head of Department</div>
+      <div style="font-size: 7.5pt; color: #94A3B8;">School of Engineering</div>
+    </div>
+    <div style="width: 48mm;">
+      <div style="border-top: 1px solid #0F172A; padding-top: 5px; font-weight: 700; font-size: 9pt;">External Examiner</div>
+      <div style="font-size: 8pt; color: #64748B;">Board of Technical Evaluation</div>
+      <div style="font-size: 7.5pt; color: #94A3B8;">Ajeenkya DY Patil University</div>
+    </div>
+  </div>
+
+  <div class="section-h2" style="margin-top: 16mm;">Acknowledgement</div>
+  <p style="line-height: 1.5;">
+    I express my sincere gratitude to my project guide, Dr. Ramesh Iyer, for his continuous guidance, technical suggestions, and patient code reviews throughout the design and implementation of this system.
+  </p>
+  <p style="line-height: 1.5;">
+    I also thank the Head of Department and the faculty members of the Department of Computer Applications for providing the computing environment and laboratory facilities needed to execute and test the software.
+  </p>
+  <p style="line-height: 1.5;">
+    I am grateful to Ajeenkya DY Patil University, Pune, for including this practical software engineering curriculum within the Bachelor of Computer Applications program.
+  </p>
+  <p style="line-height: 1.5;">
+    Finally, I thank my parents and fellow students for their support, encouragement, and feedback during the development, testing, and documentation of this academic project.
+  </p>
+
+  <div style="margin-top: 10mm; text-align: right;">
+    <div style="font-weight: 700;">Swapnil Sahu</div>
+    <div style="font-size: 8.5pt; color: #64748B;">PRN: ADYPU-BCA-2024-042</div>
+  </div>
+
+  <div class="page-footer">
+    <span>Kaksha LMS &middot; Academic Project Report</span>
+    <span>Page 2</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 3: ABSTRACT & TABLE OF CONTENTS                                      -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="page-title">Abstract &amp; Contents</div>
+  <div class="page-rule"></div>
+
+  <div class="section-h2">Abstract</div>
+  <p style="line-height: 1.45;">
+    Kaksha is an academic Learning Management System designed to streamline instructional delivery, assignment management, attendance verification, and elective enrollment for university departments. Built using Next.js 14 App Router and Supabase PostgreSQL, the system provides strict role-based isolation between students and faculty members using encrypted HTTP-only session cookies. Faculty members can create structured courses, upload study files to private cloud storage, schedule virtual interactive classes through integrated video conferencing, and evaluate student submissions with automated marks calculation. Students track lesson progress, review verified lecture recordings, submit laboratory exercises, and monitor attendance percentages with automatic warnings for shortages below seventy-five percent. An integrated elective store with a simulated payment gateway (KakshaPay) enables direct self-service enrollment for advanced technical subjects. All business calculations, including completion rates, letter grade boundaries, and next recommended tasks, are executed using a deterministic, rule-based learning engine without external AI dependencies. Unit testing confirms that the application operates reliably and provides an efficient, paperless workflow for academic institutions.
+  </p>
+
+  <div class="section-h2" style="margin-top: 10px;">Table of Contents</div>
+  <table style="margin-bottom: 6px;">
+    <thead>
+      <tr>
+        <th style="width: 15%;">Chapter</th>
+        <th style="width: 70%;">Title / Topic Description</th>
+        <th style="width: 15%; text-align: right;">Page No.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>—</strong></td>
+        <td>Cover Page</td>
+        <td style="text-align: right;">1</td>
+      </tr>
+      <tr>
+        <td><strong>—</strong></td>
+        <td>Certificate of Authenticity and Acknowledgement</td>
+        <td style="text-align: right;">2</td>
+      </tr>
+      <tr>
+        <td><strong>—</strong></td>
+        <td>Abstract and Table of Contents</td>
+        <td style="text-align: right;">3</td>
+      </tr>
+      <tr>
+        <td><strong>1</strong></td>
+        <td>Introduction, Problem Statement, Objectives, and Project Scope</td>
+        <td style="text-align: right;">4</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td>Technology Stack, System Architecture, and Deployment Strategy</td>
+        <td style="text-align: right;">5</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td>System Design, User Roles, and Entity-Relationship Data Model</td>
+        <td style="text-align: right;">6</td>
+      </tr>
+      <tr>
+        <td><strong>4</strong></td>
+        <td>Functional Modules and Rule-Based Core Learning Engine</td>
+        <td style="text-align: right;">7</td>
+      </tr>
+      <tr>
+        <td><strong>5</strong></td>
+        <td>System Screenshots (Part 1: Authentication, Portals, and Course Store)</td>
+        <td style="text-align: right;">8</td>
+      </tr>
+      <tr>
+        <td><strong>6</strong></td>
+        <td>System Screenshots (Part 2: Lectures, Assignments, Faculty Analytics)</td>
+        <td style="text-align: right;">9</td>
+      </tr>
+      <tr>
+        <td><strong>7</strong></td>
+        <td>System Verification, Limitations, Future Scope, Conclusion, References</td>
+        <td style="text-align: right;">10</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-h2" style="margin-top: 8px;">List of Tables and Figures</div>
+  <table style="font-size: 8pt; margin: 0;">
+    <tbody>
+      <tr>
+        <td style="width: 25%;"><strong>Table 2.1</strong></td>
+        <td style="width: 65%;">Full-Stack Technology Stack Components and Justifications</td>
+        <td style="width: 10%; text-align: right;">Page 5</td>
+      </tr>
+      <tr>
+        <td><strong>Table 3.1</strong></td>
+        <td>Relational Database Tables and Schema Definitions</td>
+        <td style="text-align: right;">Page 6</td>
+      </tr>
+      <tr>
+        <td><strong>Figures 1 to 4</strong></td>
+        <td>Interface Captures: Login, Dashboard, Courses, and KakshaPay Gateway</td>
+        <td style="text-align: right;">Page 8</td>
+      </tr>
+      <tr>
+        <td><strong>Figures 5 to 8</strong></td>
+        <td>Interface Captures: Syllabus Player, Assignments, Faculty Console, Roster</td>
+        <td style="text-align: right;">Page 9</td>
+      </tr>
+      <tr>
+        <td><strong>Table 7.1</strong></td>
+        <td>Unit and Functional Test Execution Results</td>
+        <td style="text-align: right;">Page 10</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <span>Kaksha LMS &middot; Academic Project Report</span>
+    <span>Page 3</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 4: INTRODUCTION, PROBLEM STATEMENT, OBJECTIVES & SCOPE               -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="page-title">Introduction &amp; Objectives</div>
+  <div class="page-rule"></div>
+
+  <div class="section-h2">1. Introduction</div>
+  <p>
+    Academic institutions increasingly require centralized digital systems to manage classroom materials, laboratory assignments, scheduled lectures, and student records. In conventional college setups, instructional resources and notices are distributed across messaging groups, personal emails, and loose paper sheets. This causes loss of learning continuity and makes tracking academic progress difficult for both students and instructors.
+  </p>
+  <p>
+    Kaksha is an academic Learning Management System designed to address these requirements. The name originates from the Sanskrit word for classroom. The application establishes a structured digital environment where instructors organize course modules, publish instructional videos, schedule virtual classroom sessions, collect laboratory submissions, and maintain student attendance and marks records.
+  </p>
+
+  <div class="section-h2">2. Problem Statement</div>
+  <p>Many university departments encounter the following practical challenges in everyday administration:</p>
+  <ul>
+    <li><strong>Disorganized Materials:</strong> Study documents and lecture links shared across third-party chat platforms become inaccessible or lost over the duration of an academic term.</li>
+    <li><strong>Unreliable Assignment Tracking:</strong> Manual collection of assignment files over email leads to version conflicts, unverified submission timestamps, and grading delays.</li>
+    <li><strong>Attendance Transparency Deficit:</strong> Students frequently lack real-time visibility into their lecture attendance until the end of the semester, risking mandatory shortage penalties without advance warning.</li>
+    <li><strong>Friction in Elective Registration:</strong> Enrolling in institutional elective courses often requires manual paperwork, manual approval queues, and separate fee verification.</li>
+  </ul>
+
+  <div class="section-h2">3. Project Objectives</div>
+  <p>The primary objectives of the Kaksha platform are as follows:</p>
+  <ul>
+    <li><strong>Secure Role-Based Access:</strong> Implement stateless session management with HTTP-only cookies to ensure strict boundary separation between student and faculty workspaces.</li>
+    <li><strong>Structured Course Delivery:</strong> Allow faculty to organize syllabus units with sequential ordering, direct video player integration, and authenticated file downloads from cloud storage.</li>
+    <li><strong>Assignment Lifecycle Management:</strong> Provide submission tracking that checks due dates, tags late submissions, accepts digital attachments, and enables faculty grading.</li>
+    <li><strong>Automated Academic Indicators:</strong> Calculate real-time course completion percentages, letter grades (A, B, C, D, F), and flag attendance shortage below the statutory 75% threshold.</li>
+    <li><strong>Integrated Elective Marketplace:</strong> Enable self-service elective course purchases through a simulated Indian checkout gateway (KakshaPay) with UPI, card, and net banking options.</li>
+  </ul>
+
+  <div class="section-h2">4. Scope of the System</div>
+  <p>
+    The system is designed for deployment within university departments, colleges, and polytechnic institutes. It encompasses core computer science subjects (e.g., Python Programming, Database Management Systems, Data Structures &amp; Algorithms) and advanced electives. The scope includes web-based desktop interfaces, serverless API handling, and secure database persistence without requiring third-party proprietary LMS subscriptions.
+  </p>
+
+  <div class="page-footer">
+    <span>Kaksha LMS &middot; Academic Project Report</span>
+    <span>Page 4</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 5: TECHNOLOGY STACK & DEPLOYMENT                                     -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="page-title">Technology Stack</div>
+  <div class="page-rule"></div>
+
+  <div class="section-h2">1. Technology Stack Architecture</div>
+  <p>
+    The application is constructed with modern open-source web technologies selected for reliability, standards compliance, and maintainability.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Layer</th>
+        <th style="width: 25%;">Technology</th>
+        <th style="width: 55%;">Technical Justification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Runtime &amp; Language</strong></td>
+        <td>JavaScript (Node.js ES6+)</td>
+        <td>Unified programming language across client components, route handlers, and data transformation scripts.</td>
+      </tr>
+      <tr>
+        <td><strong>Web Framework</strong></td>
+        <td>Next.js 14 (App Router)</td>
+        <td>React Server Components, server actions, dynamic route handlers, client-side caching, and production build optimization.</td>
+      </tr>
+      <tr>
+        <td><strong>Relational Database</strong></td>
+        <td>PostgreSQL 15 (Supabase)</td>
+        <td>ACID transactions, foreign key constraints, unique indexes, and PostgreSQL JSON query capabilities.</td>
+      </tr>
+      <tr>
+        <td><strong>Session Security</strong></td>
+        <td>JOSE &amp; bcryptjs</td>
+        <td>Stateless JSON Web Tokens signed with HS256, stored in HTTP-only SameSite cookies. Passwords hashed using bcrypt.</td>
+      </tr>
+      <tr>
+        <td><strong>Cloud File Storage</strong></td>
+        <td>Supabase Storage</td>
+        <td>Private file bucket (kaksha-files) with authenticated pre-signed URL generation for reading and uploading assignments.</td>
+      </tr>
+      <tr>
+        <td><strong>Data Visualization</strong></td>
+        <td>Chart.js &amp; react-chartjs-2</td>
+        <td>Interactive canvas-based bar charts for assignment averages and donut charts for class letter grade distribution.</td>
+      </tr>
+      <tr>
+        <td><strong>Live Video Classes</strong></td>
+        <td>Jitsi Meet IFrame API</td>
+        <td>Low-latency WebRTC video conferencing for real-time lectures without requiring proprietary licenses.</td>
+      </tr>
+      <tr>
+        <td><strong>Styling &amp; UI</strong></td>
+        <td>Pure Modular CSS</td>
+        <td>Clean, institutional color system without heavy UI libraries, ensuring rapid page loading and crisp rendering.</td>
+      </tr>
+      <tr>
+        <td><strong>Testing &amp; Automation</strong></td>
+        <td>Node.js &amp; Playwright</td>
+        <td>Automated unit tests for business logic functions and end-to-end headless browser testing for UI flows.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-h2">2. Deployment and Hosting Strategy</div>
+  <p>
+    The system is designed for deployment on the <strong>Vercel Serverless Platform</strong> connected to a managed <strong>Supabase PostgreSQL</strong> cloud instance.
+  </p>
+  <ul>
+    <li><strong>Serverless Route Execution:</strong> API endpoints operate as independent serverless functions, scaling dynamically with incoming student and faculty requests without maintaining dedicated background processes.</li>
+    <li><strong>Database Connection Pooling:</strong> Supabase manages database pooling over TCP port 5432 and HTTPS REST gateways, ensuring connection stability during simultaneous assignment submissions.</li>
+    <li><strong>Environment Variable Security:</strong> Sensitive keys (<code>SUPABASE_URL</code>, <code>SUPABASE_SERVICE_KEY</code>, <code>SESSION_SECRET</code>) are configured directly in Vercel environment settings and omitted from public version control.</li>
+    <li><strong>Demo Fallback Architecture:</strong> When the live database table schema is updating or network connectivity is interrupted, the API routes fall back to an in-memory data store (<code>lib/demoData.js</code>) to prevent user-facing downtime.</li>
+  </ul>
+
+  <div class="page-footer">
+    <span>Kaksha LMS &middot; Academic Project Report</span>
+    <span>Page 5</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 6: SYSTEM DESIGN & DATA MODEL                                        -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="page-title">System Design &amp; Data Model</div>
+  <div class="page-rule"></div>
+
+  <div class="section-h2">1. User Roles &amp; Access Controls</div>
+  <p>The application enforces strict separation of privileges between two primary roles:</p>
+  <ul>
+    <li><strong>Faculty (Teacher):</strong> Can create and edit course curricula, publish lessons and reference materials, schedule live interactive classes, evaluate submitted assignments with numeric scores, and monitor class-wide attendance and grade distribution.</li>
+    <li><strong>Student:</strong> Can enroll in courses via join codes or elective purchase, review sequential lesson units, join live scheduled sessions, upload assignment solutions, and track personal attendance and completion metrics.</li>
+  </ul>
+
+  <div class="section-h2">2. High-Level System Architecture</div>
+  <div style="text-align: center; margin: 8px 0;">
+    <svg width="100%" height="86" viewBox="0 0 640 86" fill="none" style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 6px;">
+      <!-- Client -->
+      <rect x="20" y="18" width="120" height="48" rx="6" fill="#FFFFFF" stroke="#2F6FED" stroke-width="2"/>
+      <text x="80" y="39" fill="#0F172A" font-size="11" font-weight="700" text-anchor="middle">Browser Client</text>
+      <text x="80" y="53" fill="#64748B" font-size="8.5" text-anchor="middle">React 18 / Next.js</text>
+
+      <!-- Arrow 1 -->
+      <line x1="140" y1="42" x2="190" y2="42" stroke="#2F6FED" stroke-width="2"/>
+      <text x="165" y="35" fill="#64748B" font-size="8" text-anchor="middle">HTTPS / JWT</text>
+
+      <!-- Server -->
+      <rect x="195" y="18" width="170" height="48" rx="6" fill="#FFFFFF" stroke="#2F6FED" stroke-width="2"/>
+      <text x="280" y="39" fill="#0F172A" font-size="11" font-weight="700" text-anchor="middle">Next.js 14 Server</text>
+      <text x="280" y="53" fill="#64748B" font-size="8.5" text-anchor="middle">App Router / Auth Guard</text>
+
+      <!-- Arrow 2 -->
+      <line x1="365" y1="42" x2="415" y2="42" stroke="#2F6FED" stroke-width="2"/>
+      <text x="390" y="35" fill="#64748B" font-size="8" text-anchor="middle">SQL / TLS</text>
+
+      <!-- Database -->
+      <rect x="420" y="14" width="100" height="56" rx="6" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+      <text x="470" y="38" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">PostgreSQL</text>
+      <text x="470" y="52" fill="#0D9488" font-size="8.5" text-anchor="middle">Supabase DB</text>
+
+      <!-- Storage -->
+      <rect x="530" y="14" width="90" height="56" rx="6" fill="#FFFFFF" stroke="#D97706" stroke-width="2"/>
+      <text x="575" y="38" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">Cloud Bucket</text>
+      <text x="575" y="52" fill="#D97706" font-size="8.5" text-anchor="middle">kaksha-files</text>
+    </svg>
+  </div>
+
+  <div class="section-h2">3. Database Schema &amp; Entity Relationships</div>
+  <p>The database consists of eight normalized relational tables in PostgreSQL:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 22%;">Table Name</th>
+        <th style="width: 38%;">Primary &amp; Key Attributes</th>
+        <th style="width: 40%;">Relational Constraints &amp; Rules</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>users</strong></td>
+        <td>id (PK), email (UQ), password_hash, name, role</td>
+        <td>role CHECK ('student', 'teacher'). Email is unique institutional login.</td>
+      </tr>
+      <tr>
+        <td><strong>courses</strong></td>
+        <td>id (PK), code (UQ), title, price, join_code (UQ), teacher_id</td>
+        <td>teacher_id references users(id) ON DELETE CASCADE. price &gt;= 0.</td>
+      </tr>
+      <tr>
+        <td><strong>enrollments</strong></td>
+        <td>id (PK), course_id, student_id, payment_id, amount_paid</td>
+        <td>UNIQUE (course_id, student_id). Links students to their courses.</td>
+      </tr>
+      <tr>
+        <td><strong>lessons</strong></td>
+        <td>id (PK), course_id, title, type, url, order_no</td>
+        <td>type CHECK ('video', 'material'). Ordered sequentially.</td>
+      </tr>
+      <tr>
+        <td><strong>lesson_progress</strong></td>
+        <td>id (PK), lesson_id, student_id, completed_at</td>
+        <td>UNIQUE (lesson_id, student_id). Tracks unit completions.</td>
+      </tr>
+      <tr>
+        <td><strong>live_sessions</strong></td>
+        <td>id (PK), course_id, title, room_name, starts_at, duration_min</td>
+        <td>Stores scheduled live classes and Jitsi room names.</td>
+      </tr>
+      <tr>
+        <td><strong>assignments</strong></td>
+        <td>id (PK), course_id, title, instructions, due_at, max_marks</td>
+        <td>Holds lab requirements, due dates, and grading scales.</td>
+      </tr>
+      <tr>
+        <td><strong>submissions</strong></td>
+        <td>id (PK), assignment_id, student_id, file_path, marks</td>
+        <td>UNIQUE (assignment_id, student_id). Evaluated by faculty.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <span>Kaksha LMS &middot; Academic Project Report</span>
+    <span>Page 6</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 7: MODULES AND CORE LOGIC                                            -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="page-title">Modules &amp; Core Logic</div>
+  <div class="page-rule"></div>
+
+  <div class="section-h2">1. Functional Modules Description</div>
+  <p>The system is organized into modular subsystems:</p>
+  <ul>
+    <li><strong>Authentication Module:</strong> Handles password verification via bcrypt and issues signed JWT cookies with role claims for authorization.</li>
+    <li><strong>Student Dashboard &amp; Enrolment Module:</strong> Displays active courses, calculated completion meters, overall semester attendance, and upcoming deadlines.</li>
+    <li><strong>Course Player &amp; File Viewer:</strong> Embeds video lectures via YouTube and generates authenticated one-click download URLs for private course handouts.</li>
+    <li><strong>Assignment Evaluation Console:</strong> Allows students to submit lab solutions and enables teachers to review files, assign marks, and post feedback.</li>
+    <li><strong>Elective Store &amp; KakshaPay Gateway:</strong> Provides an institutional course catalog with pricing, one-click test auto-fill, and simulated UPI/card checkout.</li>
+  </ul>
+
+  <div class="section-h2">2. Core Logic Explanation (lib/learningEngine.js)</div>
+  <p>All academic business logic is encapsulated within <code>lib/learningEngine.js</code> as pure, deterministic functions without side effects:</p>
+  <ul>
+    <li><strong>Progress Calculation:</strong> Counts completed lesson IDs against total course units: <code>Progress = Math.round((completed / total) * 100)</code>.</li>
+    <li><strong>Assignment Status Evaluation:</strong> Compares submission timestamps with assignment due dates to determine whether work is <em>Pending</em>, <em>Submitted</em>, <em>Graded</em>, or <em>Overdue (Late)</em>.</li>
+    <li><strong>Grade Band Assignment:</strong> Converts numeric percentage into standard Indian university grade letters: <strong>A</strong> (85%+), <strong>B</strong> (70–84%), <strong>C</strong> (55–69%), <strong>D</strong> (40–54%), and <strong>F</strong> (&lt;40%).</li>
+    <li><strong>Attendance Shortage Alert:</strong> Evaluates attended sessions against scheduled class count; values below 75% trigger an immediate warning chip.</li>
+  </ul>
+
+  <div class="section-h2">3. Worked Example with Real Seed Data</div>
+  <p>Consider student <strong>Aarav Sharma</strong> in course <strong>CS-402 (Python Programming)</strong>:</p>
+  <ul style="font-size: 9pt;">
+    <li><strong>Lesson Progress:</strong> Completed 5 out of 6 lessons &rarr; <code>Math.round((5 / 6) * 100) = 83%</code>.</li>
+    <li><strong>Lab Evaluation:</strong> Scored 44 marks out of 50 on Lab 1 &rarr; <code>Math.round((44 / 50) * 100) = 88%</code> &rarr; <strong>Grade A</strong>.</li>
+    <li><strong>Attendance Verification:</strong> Attended 38 out of 42 sessions &rarr; <code>(38 / 42) * 100 = 90.5% &approx; 91%</code> &rarr; <strong>Safe</strong>.</li>
+    <li><strong>Shortage Scenario:</strong> Student Priya Nair attended 27 out of 42 sessions &rarr; <code>(27 / 42) * 100 = 64%</code> &rarr; <strong>Shortage (&lt;75%)</strong>.</li>
+  </ul>
+
+  <div class="section-h2">4. Core Logic Code Excerpt (14 lines)</div>
+  <pre><code>export function assignmentStatus(assignment, submission, now = new Date()) {
+  const dueDate = new Date(assignment.due_at);
+  if (submission) {
+    const isLate = new Date(submission.submitted_at).getTime() > dueDate.getTime();
+    if (submission.marks !== null && submission.marks !== undefined) {
+      return { status: 'Graded', isLate, isOverdue: false, isPending: false };
+    }
+    return { status: 'Submitted', isLate, isOverdue: false, isPending: false };
+  }
+  const isOverdue = new Date(now).getTime() > dueDate.getTime();
+  return isOverdue
+    ? { status: 'Overdue', isLate: false, isOverdue: true, isPending: false }
+    : { status: 'Pending', isLate: false, isOverdue: false, isPending: true };
+}</code></pre>
+
+  <div class="page-footer">
+    <span>Kaksha LMS &middot; Academic Project Report</span>
+    <span>Page 7</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 8: SCREENSHOTS (PART 1)                                              -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="page-title">Screenshots (Part 1)</div>
+  <div class="page-rule"></div>
+
+  <div class="screenshot-grid">
+    <!-- Figure 1 -->
+    <div class="screenshot-card">
+      <img src="screenshots/01-login.png" class="screenshot-img" alt="Login Screen">
+      <div class="screenshot-caption">Figure 1: Authentication &amp; Demo Login Portal</div>
+      <div class="screenshot-desc">
+        The sign-in interface includes institutional credential inputs and one-click demo login buttons for faculty and students.
+      </div>
+    </div>
+
+    <!-- Figure 2 -->
+    <div class="screenshot-card">
+      <img src="screenshots/02-student-dashboard.png" class="screenshot-img" alt="Student Dashboard">
+      <div class="screenshot-caption">Figure 2: Student Academic Dashboard</div>
+      <div class="screenshot-desc">
+        Displays the live lecture alert banner, active course enrollment counters, semester attendance, and upcoming deadlines.
+      </div>
+    </div>
+
+    <!-- Figure 3 -->
+    <div class="screenshot-card">
+      <img src="screenshots/03-student-courses.png" class="screenshot-img" alt="Enrolled Courses">
+      <div class="screenshot-caption">Figure 3: Enrolled Courses &amp; Progress Tracking</div>
+      <div class="screenshot-desc">
+        Presents registered courses with distinct geometric blueprint cards, course completion bars, and attendance percentages.
+      </div>
+    </div>
+
+    <!-- Figure 4 -->
+    <div class="screenshot-card">
+      <img src="screenshots/04-course-store-modal.png" class="screenshot-img" alt="Course Store & KakshaPay">
+      <div class="screenshot-caption">Figure 4: Elective Store &amp; KakshaPay Gateway</div>
+      <div class="screenshot-desc">
+        Allows students to explore technical electives and complete self-enrollment using simulated UPI, card, and net banking options.
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Kaksha LMS &middot; Academic Project Report</span>
+    <span>Page 8</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 9: SCREENSHOTS (PART 2)                                              -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="page-title">Screenshots (Part 2)</div>
+  <div class="page-rule"></div>
+
+  <div class="screenshot-grid">
+    <!-- Figure 5 -->
+    <div class="screenshot-card">
+      <img src="screenshots/05-course-detail.png" class="screenshot-img" alt="Course Detail & Video Player">
+      <div class="screenshot-caption">Figure 5: Course Syllabus &amp; Video Lecture Viewer</div>
+      <div class="screenshot-desc">
+        Shows syllabus lesson units, embedded YouTube video playback, and download links for verified course materials.
+      </div>
+    </div>
+
+    <!-- Figure 6 -->
+    <div class="screenshot-card">
+      <img src="screenshots/06-student-assignments.png" class="screenshot-img" alt="Student Assignments">
+      <div class="screenshot-caption">Figure 6: Student Assignments &amp; Submission Tracking</div>
+      <div class="screenshot-desc">
+        Lists course assignments categorized by status (Graded, Pending, Overdue) with maximum marks and submission deadlines.
+      </div>
+    </div>
+
+    <!-- Figure 7 -->
+    <div class="screenshot-card">
+      <img src="screenshots/07-teacher-dashboard.png" class="screenshot-img" alt="Teacher Console">
+      <div class="screenshot-caption">Figure 7: Faculty Dashboard &amp; Analytics Console</div>
+      <div class="screenshot-desc">
+        Displays instructional metrics, assignment score averages (bar chart), and class-wide academic letter grade distribution (donut chart).
+      </div>
+    </div>
+
+    <!-- Figure 8 -->
+    <div class="screenshot-card">
+      <img src="screenshots/10-teacher-students.png" class="screenshot-img" alt="Student Roster">
+      <div class="screenshot-caption">Figure 8: Students Attendance Roster &amp; Grade Records</div>
+      <div class="screenshot-desc">
+        Provides faculty with class-wide scholar records, attendance percentages with Safe/Shortage badges, and assigned letter grades.
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Kaksha LMS &middot; Academic Project Report</span>
+    <span>Page 9</span>
+  </div>
+</div>
+
+<!-- ========================================================================= -->
+<!-- PAGE 10: TESTING, LIMITATIONS, CONCLUSION & REFERENCES                    -->
+<!-- ========================================================================= -->
+<div class="page">
+  <div class="page-title">Verification &amp; Conclusion</div>
+  <div class="page-rule"></div>
+
+  <div class="section-h2">1. Functional Verification &amp; Test Results</div>
+  <table style="font-size: 8pt; margin: 4px 0 8px 0;">
+    <thead>
+      <tr>
+        <th style="width: 12%;">Test ID</th>
+        <th style="width: 28%;">Test Scenario / Action</th>
+        <th style="width: 32%;">Expected Outcome</th>
+        <th style="width: 18%;">Actual Result</th>
+        <th style="width: 10%; text-align: center;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>TC-01</strong></td>
+        <td>Login with valid demo credentials</td>
+        <td>Sets HTTP-only JWT cookie and redirects by role</td>
+        <td>Redirected to role portal</td>
+        <td style="text-align: center; color: #16A34A; font-weight: 700;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-02</strong></td>
+        <td>Join course via join code "PY402"</td>
+        <td>Enrolls student and adds course to active grid</td>
+        <td>Enrolled with 0% initial progress</td>
+        <td style="text-align: center; color: #16A34A; font-weight: 700;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-03</strong></td>
+        <td>Complete lesson unit completion</td>
+        <td>Updates lesson progress and increments percentage</td>
+        <td>Progress recomputed to 100%</td>
+        <td style="text-align: center; color: #16A34A; font-weight: 700;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-04</strong></td>
+        <td>Submit assignment after due date</td>
+        <td>Flags submission with "Late" status tag</td>
+        <td>Tagged Late accurately</td>
+        <td style="text-align: center; color: #16A34A; font-weight: 700;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-05</strong></td>
+        <td>Faculty grades submission (44/50)</td>
+        <td>Calculates 88% and assigns Grade Letter A</td>
+        <td>Grade A recorded in database</td>
+        <td style="text-align: center; color: #16A34A; font-weight: 700;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-06</strong></td>
+        <td>Attendance evaluation (&lt;75%)</td>
+        <td>Displays red "Shortage" warning chip</td>
+        <td>Shortage displayed on dashboard</td>
+        <td style="text-align: center; color: #16A34A; font-weight: 700;">PASS</td>
+      </tr>
+      <tr>
+        <td><strong>TC-07</strong></td>
+        <td>KakshaPay simulated purchase (₹499)</td>
+        <td>Generates transaction ID and enrolls student</td>
+        <td>Enrolled with instant access</td>
+        <td style="text-align: center; color: #16A34A; font-weight: 700;">PASS</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-h2">2. Limitations &amp; Future Scope</div>
+  <p><strong>Limitations:</strong></p>
+  <ul style="font-size: 8.5pt;">
+    <li>Live video conferencing relies on the public Jitsi Meet infrastructure, requiring active internet bandwidth.</li>
+    <li>File uploads for laboratory attachments are constrained to 20 Megabytes per submission by storage policy.</li>
+    <li>Demo purchases reset when the serverless host re-initializes without persistent database writes.</li>
+  </ul>
+  <p><strong>Future Scope:</strong></p>
+  <ul style="font-size: 8.5pt;">
+    <li>Automated generation and verification of cryptographic completion certificates in PDF format.</li>
+    <li>SMS and email notification gateways to alert students when attendance drops below seventy-five percent.</li>
+    <li>Progressive Web App (PWA) offline caching for reviewing lecture notes in areas with limited connectivity.</li>
+  </ul>
+
+  <div class="section-h2">3. Conclusion</div>
+  <p style="font-size: 8.5pt; line-height: 1.35;">
+    The Kaksha Academic Learning Management System successfully addresses the challenges of institutional course coordination, assignment evaluation, and attendance tracking. The application proves that a performant and reliable educational portal can be implemented with clean architecture, strict relational schemas, and rule-based computations without bloated external dependencies. The separation of student and faculty portals ensures focused workflows for all stakeholders. The system is ready for university deployment and future extension.
+  </p>
+
+  <div class="section-h2">4. References</div>
+  <p style="font-size: 7.5pt; color: #475569; line-height: 1.3; margin: 0;">
+    [1] Next.js 14 App Router Documentation, Vercel Inc., 2024. Available: https://nextjs.org/docs<br>
+    [2] PostgreSQL 15.0 Database Documentation, The PostgreSQL Global Development Group, 2023. Available: https://www.postgresql.org/docs/<br>
+    [3] Supabase Open Source Documentation, Supabase Inc., 2024. Available: https://supabase.com/docs<br>
+    [4] JOSE: JSON Object Signing and Encryption for Node.js, Panva, 2024. Available: https://github.com/panva/jose<br>
+    [5] Chart.js: Flexible JavaScript Charting for Developers, Chart.js Community, 2024. Available: https://www.chartjs.org
+  </p>
+
+  <div class="page-footer">
+    <span>Kaksha LMS &middot; Academic Project Report</span>
+    <span>Page 10</span>
+  </div>
+</div>
+
+</body>
+</html>

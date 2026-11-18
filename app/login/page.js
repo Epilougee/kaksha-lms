@@ -30,7 +30,9 @@ export default function LoginPage() {
         return;
       }
 
-      if (data.user.role === 'teacher') {
+      if (data.user.role === 'admin') {
+        router.push('/admin');
+      } else if (data.user.role === 'teacher') {
         router.push('/teacher');
       } else {
         router.push('/student');
@@ -233,6 +235,15 @@ export default function LoginPage() {
                 Quick Demo Logins (password: demo123)
               </div>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                <button
+                  type="button"
+                  className="btn btn-outline btn-sm"
+                  style={{ borderColor: '#4F46E5', color: '#4F46E5', fontWeight: 700 }}
+                  onClick={() => fillDemo('admin@demo.com')}
+                >
+                  <i className="fa-solid fa-shield-halved" style={{ marginRight: '4px' }} />
+                  Admin (Director)
+                </button>
                 <button
                   type="button"
                   className="btn btn-outline btn-sm"

@@ -19,6 +19,13 @@ const TEACHER_NAV = [
   { href: '/teacher/students', label: 'Students', icon: 'fa-solid fa-users' },
 ];
 
+const ADMIN_NAV = [
+  { href: '/admin', label: 'User Governance', icon: 'fa-solid fa-users-gear' },
+  { href: '/admin/faculty', label: 'Faculty Directory', icon: 'fa-solid fa-chalkboard-user' },
+  { href: '/admin/students', label: 'Student Directory', icon: 'fa-solid fa-user-graduate' },
+  { href: '/admin/courses', label: 'Course Catalog', icon: 'fa-solid fa-book-bookmark' },
+];
+
 // Dark Ink sidebar navigation layout shell with Plus Jakarta Sans and mobile drawer
 export default function AppShell({ title, requiredRole, children }) {
   const pathname = usePathname();
@@ -37,7 +44,13 @@ export default function AppShell({ title, requiredRole, children }) {
           return;
         }
         if (requiredRole && data.user.role !== requiredRole) {
-          router.replace(data.user.role === 'teacher' ? '/teacher' : '/student');
+          if (data.user.role === 'admin') {
+            router.replace('/admin');
+          } else if (data.user.role === 'teacher') {
+            router.replace('/teacher');
+          } else {
+            router.replace('/student');
+          }
           return;
         }
         setUser(data.user);
@@ -56,7 +69,9 @@ export default function AppShell({ title, requiredRole, children }) {
     router.replace('/login');
   }
 
-  const navItems = user?.role === 'teacher' ? TEACHER_NAV : STUDENT_NAV;
+  const navItems = user?.role === 'admin'
+    ? ADMIN_NAV
+    : (user?.role === 'teacher' ? TEACHER_NAV : STUDENT_NAV);
 
   return (
     <div className="app-shell">
@@ -81,7 +96,7 @@ export default function AppShell({ title, requiredRole, children }) {
             <div className="nav-section-label">Academic Portal</div>
             {navItems.map((item) => {
               const isActive =
-                item.href === '/student' || item.href === '/teacher'
+                item.href === '/student' || item.href === '/teacher' || item.href === '/admin'
                   ? pathname === item.href
                   : pathname.startsWith(item.href);
 
@@ -130,7 +145,15 @@ export default function AppShell({ title, requiredRole, children }) {
           <div className="topbar-user">
             {user ? (
               <>
-                <span className="role-badge">{user.role}</span>
+                <span
+                  className="role-badge"
+                  style={{
+                    background: user.role === 'admin' ? '#EDE9FE' : user.role === 'teacher' ? '#DCFCE7' : '#EBF2FE',
+                    color: user.role === 'admin' ? '#6D28D9' : user.role === 'teacher' ? '#15803D' : '#1D4ED8',
+                  }}
+                >
+                  {user.role}
+                </span>
                 <span style={{ fontWeight: 600 }}>{user.name}</span>
               </>
             ) : (

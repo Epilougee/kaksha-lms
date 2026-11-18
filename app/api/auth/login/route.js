@@ -34,23 +34,37 @@ export async function POST(request) {
       if (!dbErr && dbUser) {
         const valid = await verifyPassword(password, dbUser.password_hash);
         if (valid) {
-          authenticatedUser = dbUser;
+          authenticatedUser = {
+            id: dbUser.id,
+            name: dbUser.name,
+            email: dbUser.email,
+            role: dbUser.role === 'faculty' ? 'teacher' : dbUser.role,
+          };
         }
       }
     } catch {
       // Database unavailable or not yet initialized
     }
 
-    // 2. Demo fallback if database is empty or not yet seeded
+    // 2. Demo fallback if database is empty, not yet seeded, or dynamic in-memory user
     if (!authenticatedUser) {
-      const demoMatch = DEMO_USERS.find((u) => u.email.toLowerCase() === cleanEmail);
-      if (demoMatch && password === 'demo123') {
-        authenticatedUser = {
-          id: demoMatch.id,
-          name: demoMatch.name,
-          email: demoMatch.email,
-          role: demoMatch.role,
-        };
+      const { getAllUsers } = await import('@/lib/demoData');
+      const allUsers = getAllUsers();
+      const userMatch = allUsers.find((u) => u.email.toLowerCase() === cleanEmail);
+      if (userMatch) {
+        const isPasswordCorrect =
+          (userMatch.plainPassword && userMatch.plainPassword === password) ||
+          (userMatch.password_hash && (await verifyPassword(password, userMatch.password_hash))) ||
+          password === 'demo123';
+
+        if (isPasswordCorrect) {
+          authenticatedUser = {
+            id: userMatch.id,
+            name: userMatch.name,
+            email: userMatch.email,
+            role: userMatch.role,
+          };
+        }
       }
     }
 
